@@ -1,0 +1,50 @@
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+}
+
+/* Header */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+
+.student-id {
+  border: 5px solid blue;
+  padding: 20px;
+}
+
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* highlight */
+.highlight {
+  background-color: yellow;
+  color: red;
+}
+
+/* keyword */
+.highlight-keyword {
+  color: orange;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+ol.roman {
+  list-style-type: lower-roman;
+}
