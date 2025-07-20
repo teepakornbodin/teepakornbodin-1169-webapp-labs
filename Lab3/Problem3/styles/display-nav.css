@@ -1,0 +1,212 @@
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 0,auto;
+  padding: 20px;
+  background-color:  #f5f5f5;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+/* h2 {
+  color: #7f8c8d;
+  margin-top: 0;
+} */
+ h2 {
+    margin-top: 30px;
+  color: #34495e;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.container {
+    max-width: 900px;
+  margin: 0 auto;
+}
+hr {
+    border: 1px solid #3498db;
+    padding: auto;
+}
+h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+/* Demo section styling */
+.demo-section {
+    text-align: start;
+  margin: 25px 0;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Point 1: Display Properties - Block elements full width on new lines */
+.block-demo div {
+    display: block;
+    /* ใส่เพื่อให้ได้แบบตัวอย่าง */
+width: 200px; 
+height: 50px;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+
+/* Point 1: Display Properties - Inline elements side-by-side (no width/height) */
+.inline-demo span {
+  padding: 10px 15px;
+  margin: 5px;
+    display: inline;
+  color: white;
+  font-weight: bold;
+}
+
+/* Point 1: Display Properties - Inline-block elements side-by-side with width/height */
+.inline-block-demo div {
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+  margin: 5px;
+  line-height: 60px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Point 5: Color & Typography - Different background colors (red, green, blue) */
+.block-item:nth-child(1) { background-color: red; }
+.block-item:nth-child(2) { background-color: green; }
+.block-item:nth-child(3) { background-color: blue; }
+.inline-item:nth-child(1) {background-color: red;}
+.inline-item:nth-child(2) {background-color: green;}
+.inline-item:nth-child(3) {background-color: blue;}
+.inline-block-item:nth-child(1) { background-color: red; }
+.inline-block-item:nth-child(2) { background-color: green; }
+.inline-block-item:nth-child(3) { background-color: blue; }
+
+/* Point 3: Hover Effects - Display demo elements have hover effect changing background color */
+.block-item:hover,
+.inline-item:hover,
+.inline-block-item:hover {
+background-color: #4CAF50 !important;
+}
+
+/* Point 2 & 3: Navigation Styling with Flexbox Properties */
+nav {
+  margin: 25px 0;
+}
+
+
+
+ /* Remove list bullets */
+/* Background color #333 */
+ /* Horizontal layout using display: flex */
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: #333;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Point 2 & 5: Navigation links padding 15px 20px, white text */
+nav a {
+  display: block;
+    color: white;
+    padding: 15px 20px;
+
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Point 3: Hover Effects - Navigation links change background to #4CAF50 on hover */
+nav a:hover {
+    background-color: #4CAF50;
+}
+
+/* Point 3: Flexbox Properties Demo */
+.flex-container {
+    display: flex;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  min-height: 100px;
+}
+
+.flex-item {
+  color: white;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.flex-item small {
+  font-size: 12px;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* Point 3: Flexbox Properties - Use flex-grow and flex-shrink on flexbox demo */
+.flex-item1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+  flex-basis: 200px;
+  background-color: red;
+}
+
+.flex-item2 {
+    flex-grow: 3;
+    flex-shrink: 1;
+
+  flex-basis: 200px;
+  background-color: green;
+}
+
+.flex-item3 {
+    flex-grow: 1;
+    flex-shrink: 3;
+  flex-basis: 200px;
+  background-color: blue;
+}
+
+.flex-item4 {
+    flex-grow: 2;
+    flex-shrink: 2;
+  flex-basis: 200px;
+  background-color: orange;
+}
+
+/* Point 3: Hover Effects - Display demo elements have hover effect changing background color */
+.block-item:hover,
+.inline-item:hover,
+.inline-block-item:hover,
+.flex-item:hover {
+     background-color: #34495e !important;
+
+}
