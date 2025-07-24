@@ -1,0 +1,201 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Section Headings & Layout */
+section h2 {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-section {
+    margin-bottom: 50px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* CSS Grid Layout */
+.skills-section {
+    margin-bottom: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projects-section {
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.contact-section {
+    margin-bottom: 50px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Card Styles & Buttons */
+.skill-card,
+.project-card,
+.contact-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.skill-card h3,
+.project-card h3,
+.contact-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.skill-card p,
+.project-card p,
+.contact-item p {
+    color: #666;
+}
+
+/* Contact Links Styling */
+.contact-item a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.view-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.view-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Tablet Responsive Styles */
+@media (max-width: 1023px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+    body {
+        padding: 15px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+}
