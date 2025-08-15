@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cylinder Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: #333;
+      }
+      .highlight {
+        color: #007bff;
+        font-weight: bold;
+      }
+      .dotted {
+        border: 2px dashed red;
+        padding: 15px;
+        display: inline-block;
+        font-weight: bold;
+        margin-top: 0;
+      }
+      .errormessage {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🔢 Cylinder Volume Calculator</h1>
+    <script>
+      // TODO 1
+      let isValidNumber = (value) => {
+        return typeof value === "number" && !isNaN(value) && isFinite(value);
+      };
+
+      // TODO 2
+      function getDimension(dimensionName) {
+        let value;
+        do {
+          let input = prompt(`Enter the ${dimensionName} of the cylinder:`);
+          value = parseFloat(input);
+
+          if (!isValidNumber(value) || value <= 0) {
+            alert(`Invalid ${dimensionName}. Please enter a positive number.`);
+            value = null;
+          }
+        } while (value === null);
+
+        return value;
+      }
+
+      // TODO 3
+      function Cylinder() {
+        this.radius = getDimension("radius");
+        this.height = getDimension("height");
+
+        this.volume = () => Math.PI * Math.pow(this.radius, 2) * this.height;
+      }
+
+      // TODO 4
+      const displayResult = function (cylinder) {
+        const vol = cylinder.volume();
+        if (!isValidNumber(vol)) {
+          document.write("<p class='errormessage'>Error: Could not calculate volume.</p>");
+          return;
+        }
+        document.write(
+          `<p class="dotted">Cylinder Volume for radius <span class="highlight">${cylinder.radius}</span> and height <span class="highlight">${cylinder.height}</span> is <span class="highlight">${vol.toFixed(4)}</span> cubic units</p>`
+        );
+      };
+
+      // Main execution
+      const cylinder = new Cylinder();
+      displayResult(cylinder);
+    </script>
+  </body>
+</html>
