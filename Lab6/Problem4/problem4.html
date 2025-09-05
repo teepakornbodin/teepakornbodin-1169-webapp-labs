@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Challenge: Catwalk</title>
+    <style>
+      #cat {
+        position: absolute;
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- Cat walking GIF from: http://www.anniemation.com/clip_art/graphics.html -->
+      <img
+        id="cat"
+        src="https://www.kasandbox.org/programming-images/misc/cat-walk.gif"
+      />
+    </div>
+
+    <script>
+      let catEl = document.getElementById("cat");
+
+      let startTime = new Date().getTime();
+      let walkTheCat = function () {
+        let currTime = new Date().getTime();
+        let secondsElapsed = (currTime - startTime) / 1000;
+        
+        // คำนวนเวลา
+        let newLeft = secondsElapsed * 100;
+        
+        // Check ขนาด ถ้าเกิน 1000px ให้หยุด
+        if (newLeft >= 1000) {
+          catEl.style.left = "1000px";
+          
+          // เปลี่ยนเป็นภาพนิ่ง
+          let currentWidth = catEl.offsetWidth;
+          catEl.src = "https://img5.pic.in.th/file/secure-sv1/cat-walk.png ";
+          catEl.style.width = currentWidth + "px";
+          
+          // หยุดการเคลื่อนไหว
+          return;
+        }
+        
+        // ตำแหน่งใหม่
+        catEl.style.left = newLeft + "px";
+        
+        // ทำงานต่อ
+        requestAnimationFrame(walkTheCat);
+      };
+
+      walkTheCat();
+    </script>
+  </body>
+</html>
