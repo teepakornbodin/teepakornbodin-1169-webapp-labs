@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>fetch_github_token.html</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { 
+      margin: 0; min-height: 100vh; display: grid; place-items: cente;
+      background: #ffff; font-family: sans-serif;
+    }
+    .wrap { text-align: center; padding: 2rem; }
+    h1 a { color: #1e3a8a; text-decoration: underline; }
+    .avatar {
+      width: 240px; height: 240px; border-radius: 50%;
+      border: 8px solid #1e3aee; object-fit: cover;
+    }
+    .msg { margin-top: 1rem; color: #9b111e; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1><a id="nameLink" href="#" target="_blank" rel="noopener noreferrer"></a></h1>
+    <img id="avatar" class="avatar" alt="GitHub avatar" />
+    <div id="msg" class="msg"></div>
+  </main>
+
+  <script>
+    const USERNAME = "teepakornbodin"; 
+    const TOKEN = "token";
+
+    const nameLinkEl = document.getElementById("nameLink");
+    const avatarEl   = document.getElementById("avatar");
+    const msgEl      = document.getElementById("msg");
+
+    async function loadProfile() {
+      try {
+        const res = await fetch(`https://api.github.com/users/${USERNAME}`, {
+          headers: {
+            "Accept": "application/vnd.github+json",
+            "Authorization": `token ${TOKEN}`
+          }
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const { name, html_url, avatar_url, login } = await res.json();
+
+        const displayName = name || login || USERNAME;
+        nameLinkEl.textContent = displayName;
+        nameLinkEl.href = html_url;
+        avatarEl.src = avatar_url;
+        avatarEl.alt = `Avatar of ${displayName}`;
+      } catch (err) {
+        msgEl.textContent = "โหลดข้อมูลไม่สำเร็จ: " + err.message;
+      }
+    }
+
+    loadProfile();
+  </script>
+</body>
+</html>
+
+
+
