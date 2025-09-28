@@ -1,4 +1,3 @@
-
 const args = process.argv.slice(2);
 
 if (args.length < 2) {
@@ -19,7 +18,7 @@ process.stdout.write("v add | subtract ");
 
 process.stdin.setEncoding("utf8");
 process.stdin.on("data", (input) => {
-  const operator = input.trim(); //ลบช่องว่าง (space), tab, และ newline (\n)
+  const operator = input.trim(); //ลบช่องว่าง
 
   if (operator === "add") {
     console.log(`${num1} + ${num2} = ${num1 + num2}`);
