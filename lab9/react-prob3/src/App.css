@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.GitHubInfo {
+  text-align: center;
+}
+
+.avatar-img {
+  background-size: cover;
+  margin: 0 auto; 
+}
+
+.repoURL {
+  display: block;
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+}

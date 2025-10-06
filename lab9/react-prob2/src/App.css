@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
+.avatar-img {
+  width: 200px;
+  height: 200px; 
+  background-size: cover;
+   margin: 0 auto; 
+}
+
+.repoURL {
+  display: block;
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
